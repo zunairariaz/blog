@@ -1,7 +1,10 @@
 
 
-<h1> <%= @users.name %> </h1>
-<p> <%= @users.age %> </p>
-<p> <%= @users.address %> </p>
+<h1> <%= @user.name %> </h1>
+<p> <%= @user.age %> </p>
+<p> <%= @user.address %> </p> </br>
 
-<h4> <% link_to "Back to All Users", users_path%> </h4>
+ <%= link_to "Back to All Users", users_path%> </br>
+<%= link_to "delete", user_path(@user), method: :delete %>
+<%= link_to "edit", edit_user_path(@user) %>
+

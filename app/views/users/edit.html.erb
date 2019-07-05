@@ -1,0 +1,29 @@
+<h1> Edit user </h1>
+
+<%=form_for(@user) do |u| %>
+<ul>
+<% @user.errors.full_messages.each do |error| %>
+<li><%= error%> </li>
+<%end%>
+</ul>
+
+<p>
+<%= u.label :name %>
+<%= u.text_field :name %>
+</p>
+
+<p>
+<%= u.label :age %>
+<%= u.text_field :age %>
+</p>
+
+<p>
+<%= u.label :address %>
+<%= u.text_field :address %>
+</p>
+
+
+<p>
+<%=u.submit%>
+</p>
+<%end%>
